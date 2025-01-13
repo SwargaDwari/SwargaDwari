@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Swargadwari Bootstrap Template - Inner Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+<style>
+
+.container{
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+ /* Glassmorphism Effect */
+ .card {
+      /* From https://css.glass */
+background: rgba(209, 204, 204, 0.1);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.3px);
+-webkit-backdrop-filter: blur(2.3px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      text-align: left;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+      height: 100%;
+    }
+
+    .card:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    }
+
+    .card-title {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      font-family: 'Poppins', sans-serif; /* Sleek modern font */
+      font-weight: 600;
+      color: #f8f8f8;
+    }
+
+    .card-text {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #f1f1f1;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .card ul {
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+    }
+
+    .card ul li::before {
+      content: '✔'; /* Replace with icons for better visual */
+      margin-right: 0.5rem;
+      color: #ff6b7d; /* Matches gradient */
+      font-weight: bold;
+    }
+
+    .form-select {
+      margin-bottom: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem;
+      transition: background 0.3s;
+    }
+
+    .form-select:focus {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6b7d);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(255, 107, 125, 0.6);
+      opacity: 0.9;
+    }
+
+    .text-warning, .text-danger, .text-success {
+      font-weight: bold;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+      }
+
+      .btn-primary {
+        padding: 0.5rem 1rem;
+      }
+    }
+/* .popular-facilities {
+  text-align: center;
+  margin-bottom: 20px;
+} */
+
+   /* Icons Section */
+   .icons-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 15px;
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background-color: #333;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .icons-row span {
+      background-color: #444;
+      border-radius: 8px;
+      padding: 12px 20px;
+      color: #f1f1f1;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+    .icons-row span:hover {
+      background-color: #555;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Facilities Grid Section */
+    .facilities-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 0 2rem;
+    }
+
+    .facilities-grid div {
+      background-color: #2c2c2c;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      color: #ddd;
+      flex-basis: 30%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .facilities-grid div:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+      color: #f39c12;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      color: #bbb;
+    }
+
+    ul li {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .facilities-grid ul li::before {
+      content: '✔'; /* Green check mark */
+      margin-right: 0.5rem;
+      color: #27ae60;
+    }
+
+    .highlight {
+      color: #e74c3c;
+    }
+
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .facilities-grid {
+        flex-direction: column;
+      }
+
+      .facilities-grid div {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+      }
+
+      .icons-row span {
+        font-size: 1rem;
+        padding: 8px 12px;
+      }
+    }
+
+    .house-rules-container {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .house-rules-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #f39c12;
+      margin-bottom: 0.5rem;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Table Styling */
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+    }
+
+    .rules-table th {
+      background-color: #1a252f;
+      color: #f39c12;
+      text-align: left;
+      padding: 15px 20px;
+      border: 1px solid #444;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .rules-table td {
+      background-color: #2a3b4c;
+      color: #bbb;
+      padding: 15px 20px;
+      border: 1px solid #444;
+      word-wrap: break-word;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .rules-table td a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .rules-table td a:hover {
+      color: #f39c12;
+    }
+
+    .rules-table tr:nth-child(even) {
+      background-color: #1a252f;
+    }
+
+    .rules-table tr:hover {
+      background-color: #34495e;
+    }
+
+    .rules-table th,
+    .rules-table td {
+      border-radius: 8px;
+    }
+
+    /* Hover Effect */
+    .rules-table tr:hover th {
+      background-color: #f39c12;
+      color: #2c2c2c;
+    }
+
+    /* Animated Hover Effect for Rows */
+    .rules-table td:hover {
+      background-color: #1e2a34;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .house-rules-container {
+        padding: 1.5rem;
+        margin: 1rem;
+      }
+
+      .title {
+        font-size: 1.8rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .rules-table th,
+      .rules-table td {
+        padding: 12px;
+      }
+    }
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+977 981-2802691</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Mon-Sat: 11AM - 23PM</span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li>En</li>
+          <li><a href="#">De</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Swargadwari</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="./index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="./index.html">Menu</a></li>
+          <li><a class="nav-link scrollto" href="./offerings.html">Offerings</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#events">Events</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#gallery">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="./index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="section-title">
+      <h2>Availability</h2>
+      <p>See Our times and Offerings</p>
+    </div>
+    <section>
+      <div>
+        <div class="row ">
+          <!-- Card 1 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Double Room</h5>
+                <p class="card-text text-danger">🔴 Only 3 rooms left on our site</p>
+                <p>1 double bed</p>
+                <p>🏙️ City view &nbsp; 🛁 Ensuite bathroom</p>
+                <p>📺 Flat-screen TV &nbsp; 🔇 Soundproofing</p>
+                <p><strong>NPR 1,100</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> Free Wi-Fi</li>
+                  <li> Shower & Toilet</li>
+                  <li> Seating Area</li>
+                  <li> Tea/Coffee maker</li>
+                </ul>
+                <p class="text-success">Available</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Twin Room</h5>
+                <p class="card-text text-danger">🔴 Only 1 room left!</p>
+                <p>2 single beds</p>
+                <p>🏞️ Garden view &nbsp; 🛁 Ensuite bathroom</p>
+                <p>📺 Flat-screen TV &nbsp; 🔇 Soundproofing</p>
+                <p><strong>NPR 1,788</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> Free toiletries</li>
+                  <li> Dining Area</li>
+                  <li> Interconnected rooms</li>
+                  <li> Clothes rack</li>
+                </ul>
+                <p class="text-danger">Limited</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Family Suite</h5>
+                <p>2 double beds</p>
+                <p>🏙️ City view &nbsp; 🛁 Ensuite bathroom</p>
+                <p>📺 Flat-screen TV &nbsp; 🔇 Soundproofing</p>
+                <p><strong>NPR 3,000</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> Kitchenette</li>
+                  <li> Coffee maker</li>
+                  <li> Seating Area</li>
+                  <li> Electric kettle</li>
+                </ul>
+                <p class="text-success">Available</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Luxury Suite</h5>
+                <p>1 King-sized bed & 1 Sofa bed</p>
+                <p>🌅 Sea view &nbsp; 🛁 Ensuite bathroom</p>
+                <p>📺 55-inch Smart TV &nbsp; 🛎️ Private Butler Service</p>
+                <p><strong>NPR 6,500</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> High-speed Wi-Fi</li>
+                  <li> Bathtub & Rain Shower</li>
+                  <li> Complimentary Minibar</li>
+                  <li> Personal Workspace</li>
+                </ul>
+                <p class="text-success">Available</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Studio Apartment</h5>
+                <p>1 Queen-sized bed</p>
+                <p>🌇 City skyline view &nbsp; 🛁 Ensuite bathroom</p>
+                <p>📺 42-inch Flat-screen TV &nbsp; 🛋️ Living Area</p>
+                <p><strong>NPR 4,200</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> Kitchenette with Microwave</li>
+                  <li> Laundry Facilities</li>
+                  <li> Soundproofing</li>
+                  <li> Private Balcony</li>
+                </ul>
+                <p class="text-warning">Limited</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title text-warning">Presidential Suite</h5>
+                <p>2 King-sized beds & 1 Living Area</p>
+                <p>🌌 Panoramic city view &nbsp; 🛁 Jacuzzi & Rain Shower</p>
+                <p>📺 75-inch 4K TV &nbsp; 🔥 Fireplace</p>
+                <p><strong>NPR 15,000</strong> <br><small>Includes taxes and charges</small></p>
+                <ul class="list-unstyled">
+                  <li> Private Terrace</li>
+                  <li> Jacuzzi & Steam Room</li>
+                  <li> Complimentary Personal Concierge</li>
+                  <li> Designer Furniture</li>
+                </ul>
+                <p class="text-danger">Very limited</p>
+                <select class="form-select mb-2">
+                  <option value="0">0</option>
+                  <option value="1">1 room</option>
+                  <option value="2">2 rooms</option>
+                  <option value="3">3 rooms</option>
+                </select>
+                <button class="btn btn-primary btn-sm w-100">Pick Room</button>
+              </div>
+            </div>
+          </div>
+    
+      
+          
+        </div>
+      </div>
+    </section>
+    
+   <!-- Popup Modal -->
+<div id="roomPopup" class="modal" style="display:none;">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Congratulations!</h5>
+        <button type="button" class="btn-close btn-close-white" onclick="closePopup()"></button>
+      </div>
+      <div class="modal-body">
+        <p id="popupMessage"></p>
+        <div>
+          <h6>Choose a Payment Option:</h6>
+          <button class="btn btn-primary w-100 mb-3" onclick="showQR()">Pay via QR Code</button>
+          <button class="btn btn-secondary w-100" onclick="payAtCounter()">Pay at Counter</button>
+        </div>
+        <div id="qrSection" style="display: none;">
+          <h6 class="mt-3">Scan the QR Code:</h6>
+          <img class="img-fluid" src="./assets/img/qr.png" alt="QR Code">
+          <p class="mt-2">Total Amount: <span id="totalAmount"></span></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closePopup()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </section>
+  </main><!-- End #main -->
+  <section class="container">
+    <div class="section-title"> 
+      <h2>Facilities of Hotel R Valley View And Family Restaurant Pvt Ltd</h2>
+      <p><strong>Most popular facilities</strong></p></div>
+   
+  <!-- Icons Section -->
+  <div class="icons-row">
+    <span>🚭 Non-smoking rooms</span>
+    <span>🛎️ Room service</span>
+    <span>🍴 Restaurant</span>
+    <span>🅿️ Free parking</span>
+    <span>👨‍👩‍👧‍👦 Family rooms</span>
+    <span>⏰ 24-hour front desk</span>
+    <span>🍺 Bar</span>
+    <span>☕ Tea/coffee maker in all rooms</span>
+    <span>🍳 Breakfast</span>
+  </div>
+
+  <!-- Facilities Grid Section -->
+  <div class="facilities-grid">
+    <!-- Left Column -->
+    <div>
+      <h4>Bathroom</h4>
+      <ul>
+        <li>Toilet paper</li>
+        <li>Towels</li>
+        <li>Additional toilet</li>
+        <li>Slippers</li>
+        <li>Private bathroom</li>
+        <li>Toilet</li>
+        <li>Free toiletries</li>
+        <li>Shower</li>
+      </ul>
+      <h4>Bedroom</h4>
+      <ul>
+        <li>Linen</li>
+      </ul>
+      <h4>View</h4>
+      <ul>
+        <li>City view</li>
+      </ul>
+      <h4>Kitchen</h4>
+      <ul>
+        <li>Dining table</li>
+        <li>Electric kettle</li>
+      </ul>
+      <h4>Room Amenities</h4>
+      <ul>
+        <li>Clothes rack</li>
+      </ul>
+      <h4>Pets</h4>
+      <ul>
+        <li>Pets are allowed on request. Charges may be applicable.</li>
+      </ul>
+      <br>
+      <h4 class="highlight">General</h4>
+      <ul>
+        <li>Shuttle service (Additional charge)</li>
+        <li>Shared lounge/TV area</li>
+        <li>Non-smoking throughout</li>
+        <li>Hardwood or parquet floors</li>
+        <li>Tile/marble floor</li>
+        <li>Heating</li>
+        <li>Soundproofing</li>
+        <li>Interconnected room(s) available</li>
+        <li>Fan</li>
+        <li>Family rooms</li>
+        <li>Airport shuttle (Additional charge)</li>
+        <li>Non-smoking rooms</li>
+        <li>Room service</li>
+      </ul>
+    </div>
+
+    <!-- Middle Column -->
+    <div>
+      <h4>Activities</h4>
+      <ul>
+        <li>Movie nights</li>
+      </ul>
+      <h4>Living Area</h4>
+      <ul>
+        <li>Dining area</li>
+        <li>Seating Area</li>
+      </ul>
+      <h4>Media & Technology</h4>
+      <ul>
+        <li>Flat-screen TV</li>
+        <li>Cable channels</li>
+        <li>TV</li>
+      </ul>
+      <h4>Food & Drink</h4>
+      <ul>
+        <li>Coffee house on site</li>
+        <li>Wine/champagne (Additional charge)</li>
+        <li>Kid meals</li>
+        <li>Breakfast in the room</li>
+        <li>Bar</li>
+        <li>Restaurant</li>
+        <li>Tea/Coffee maker</li>
+      </ul>
+
+      <h4>Internet</h4>
+      <p>Fast internet access available.</p>
+      <h4>Parking</h4>
+      <p>Free private parking is possible on site (reservation is not needed).</p> <br>
+      <h4>Languages spoken</h4>
+      <ul>
+        <li>Nepali</li>
+        <li>Hindi</li>
+        <li>English</li>
+        <li>Magar</li>
+        <li>Newari</li>
+      </ul>
+    </div>
+
+    <!-- Right Column -->
+    <div>
+      <h4>Reception services</h4>
+      <ul>
+        <li>Invoice provided</li>
+        <li>Private check-in/check-out</li>
+        <li>ATM/cash machine on site</li>
+        <li>Luggage storage</li>
+        <li>Express check-in/check-out</li>
+        <li>24-hour front desk</li>
+      </ul>
+      <h4>Cleaning services</h4>
+      <ul>
+        <li>Daily housekeeping (Additional charge)</li>
+        <li>Trouser press (Additional charge)</li>
+        <li>Ironing service (Additional charge)</li>
+        <li>Dry cleaning (Additional charge)</li>
+        <li>Laundry (Additional charge)</li>
+      </ul>
+      <h4>Business facilities</h4>
+      <ul>
+        <li>Fax/photocopying</li>
+      </ul>
+      <h4>Safety & security</h4>
+      <ul>
+        <li>Fire extinguishers</li>
+        <li>CCTV outside property</li>
+        <li>CCTV in common areas</li>
+        <li>Smoke alarms</li>
+        <li>Security alarm</li>
+        <li>Key access</li>
+      </ul>
+    </div>
+  </div>
+  </section>
+  <section class="house-rules-container">
+    <h2 class="title">House Rules</h2>
+    <p class="subtitle">
+      Hotel R Valley View And Family Restaurant Pvt Ltd takes special requests - add in the next step!
+    </p>
+    <table class="rules-table">
+      <tbody>
+        <tr>
+          <th>⏰ Check-in</th>
+          <td>From 11:00 to 00:00</td>
+        </tr>
+        <tr>
+          <th>⏳ Check-out</th>
+          <td>From 11:00 to 23:00</td>
+        </tr>
+        <tr>
+          <th>🔄 Cancellation/ prepayment</th>
+          <td>
+            Cancellation and prepayment policies vary according to accommodation type. Please check what 
+            <a href="#">conditions</a> may apply to each option when making your selection.
+          </td>
+        </tr>
+        <tr>
+          <th>🧒 Children and beds</th>
+          <td>
+            <strong>Child policies</strong><br>
+            Children of any age are welcome.<br>
+            To see correct prices and occupancy information, please add the number of children in your group and their ages to your search.<br>
+            <strong>Cot and extra bed policies</strong><br>
+            Cots and extra beds are not available at this property.
+          </td>
+        </tr>
+        <tr>
+          <th>🚫 No age restriction</th>
+          <td>There is no age requirement for check-in</td>
+        </tr>
+        <tr>
+          <th>🐾 Pets</th>
+          <td>Pets are allowed on request. Charges may be applicable.</td>
+        </tr>
+        <tr>
+          <th>🎉 Parties</th>
+          <td>Parties/events are not allowed</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Swargadwari</h3>
+              <p>
+                Dang, Babai <br>
+                54MH+7J7, Purandhara 22400<br><br>
+                <strong>Phone:</strong> +977 981-2802691<br>
+                <strong>Email:</strong> swargadwari83@gmail.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+           <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Map</h4>
+            <ul>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3517.86664845389!2d82.70839540559308!3d28.150547466428833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3997c7b51980beff%3A0x4e3b28d8be705cf5!2sSwargadwari%20Mandavi%20Hotel!5e0!3m2!1sen!2snp!4v1735785894026!5m2!1sen!2snp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+           
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Swargadwari</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a >Poonam Subedi</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+<!-- JavaScript -->
+<script>
+  document.querySelectorAll('.pick-room-btn').forEach(button => {
+    button.addEventListener('click', event => {
+      const selectElement = event.target.previousElementSibling;
+      const selectedValue = parseInt(selectElement.value, 10);
+
+      if (selectedValue > 0) {
+        const pricePerRoom = parseInt(
+          event.target.closest('tr').querySelector('td:nth-child(3) strong').textContent.replace('NPR ', '')
+        );
+
+        const totalAmount = selectedValue * pricePerRoom;
+
+        document.getElementById('popupMessage').textContent = `Congratulations! You have successfully booked ${selectedValue} room(s).`;
+        document.getElementById('totalAmount').textContent = `NPR ${totalAmount}`;
+        document.getElementById('roomPopup').style.display = 'block';
+      } else {
+        alert('Please select at least 1 room before clicking "Pick Room".');
+      }
+    });
+  });
+
+  function closePopup() {
+    document.getElementById('roomPopup').style.display = 'none';
+    document.getElementById('qrSection').style.display = 'none';
+  }
+
+  function showQR() {
+    document.getElementById('qrSection').style.display = 'block';
+  }
+
+  function payAtCounter() {
+    alert('You have chosen to pay at the counter.');
+    closePopup();
+  }
+</script>
+</body>
+
+</html>
